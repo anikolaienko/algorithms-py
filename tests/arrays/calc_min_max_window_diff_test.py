@@ -1,4 +1,4 @@
-from algorithms.arrays.calc_min_max_window_diff import calc_min_max_window_diff
+from algorithms.arrays import calc_min_max_window_diff
 
 def test_calc_min_max_window_diff__1():
     assert calc_min_max_window_diff([1]) == 0
