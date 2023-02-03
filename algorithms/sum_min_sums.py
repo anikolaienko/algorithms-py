@@ -5,20 +5,6 @@
 #
 MODULO_COEF = 10 ** 9 + 7
 
-def findTotalPower(power):
-    min_value = power[0]
-    sum_values = [power[0]]
-    total_sum = min_value * sum_values[-1]
-
-    for i in range(1, len(power)):
-        min_value = min(min_value, power[i])
-        curr_sum = power[i] * power[i] + sum(sum_values) * min_value
-        sum_values.append(sum(sum_values) + power[i])
-        
-        total_sum = (total_sum + curr_sum) % MODULO_COEF
-    
-    return total_sum
-
 def findTotalPowerSlow(power):
     total_sum = 0
     for i in range(len(power)):

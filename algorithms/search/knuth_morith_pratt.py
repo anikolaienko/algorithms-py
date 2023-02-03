@@ -29,32 +29,3 @@ def knuthMorrisPratt(string, substring):
                 j += 1
     
     return False
-
-# "aefoaefcdaefcdaed"
-# "aefcdaed"
-
-# "a e f c d a e d"
-#  0 0 0 0 0 0 1 2
-
-# "a e f o a e f c d a e f c d a e d"
-#                        i
-
-
-# "a e f c d a e d"
-#                j
-
-
-# "a e f c d a e f c"
-#            0 1 2 3
-
-
-#    0 1         
-# "a a a e f c d a a a a e f"
-
-#    0
-# "a a e f c d a a a e f"
-#      i
-
-#    0 1 2 3
-# "a a e f c d a a a e f"
-#        j
