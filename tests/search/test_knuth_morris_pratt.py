@@ -1,5 +1,5 @@
 import pytest
-from algorithms.search.knuth_morith_pratt import knuthMorrisPratt
+from algorithms.search.knuth_morris_pratt import knuthMorrisPratt
 
 
 testdata = [
