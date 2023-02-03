@@ -8,24 +8,24 @@ def knuthMorrisPratt(string, substring):
                 j += 1
                 prefix_idx[i + 1] = j
         else:
-            j = prefix_idx[i]
             while j > 0 and substring[i] != substring[j]:
                 j = prefix_idx[j]
             if j > 0:
                 j += 1
-                prefix_idx[i + 1] = j
+                if i + i < len(substring):
+                    prefix_idx[i + 1] = j
 
     j = 0
-    for i in range(1, len(string)):
+    for i in range(0, len(string)):
         if string[i] == substring[j]:
             j += 1
-            if j == len(substring):
+            if j >= len(substring):
                 return True
         else:
             while j > 0 and substring[j] != string[i]:
                 j = prefix_idx[j]
 
-            if j > 0:
+            if j > 0 or substring[j] == string[i]:
                 j += 1
     
     return False
