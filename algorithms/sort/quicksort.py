@@ -3,6 +3,8 @@ def quick_sort(array: list[int], algo: str = "hoare"):
         _quick_sort_lumoto(array, 0, len(array) - 1)
     elif algo.lower() == "hoare":
         _quick_sort_hoare(array, 0, len(array) - 1)
+    else:
+        raise NotImplementedError()
 
 
 def _quick_sort_lumoto(array, lo, hi):
